@@ -1,59 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Roboto:ital,wght@1,300&display=swap');
-*
-{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
-.container
-{
+
+body {
+    background-image: url(data:image/jpeg;base64,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);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 100px 0px;    
+    padding: 100px 0px;
 }
-#para
-{
+
+#para {
+    color: white;
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
 }
-#button
-{
-    
+
+#button {
+
     margin: 3px auto;
-    font-family: 'Roboto Slab', serif;
-font-weight: bold;
     padding: 5px 0px;
 }
-.btn
-{
-    width: 100px; 
+
+.btn {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    width: 100px;
     border-radius: 8px;
+    cursor: pointer;
+    color: white;
     background-color: #9999ee;
-     height: 25px;
+    height: 25px;
 }
-#bulb-container button
-{
-    
+
+.btnbulb {
+
     height: 30px;
-    width: 100px; 
+    width: 100px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+
     border-radius: 8px;
     background-color: #9999ee;
-     
+  color: white;
     display: flex;
     align-items: center;
     margin: 15px auto;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 }
-#bulb-container
-{
+
+#bulb-container {
 
     display: none;
 }
-#bulb-container img
-{
+
+#bulb-container img {
 
     display: flex;
     margin: auto;
+}
+#onbutton
+{
+    background-color: green;
+}
+#offbutton
+{
+    background-color: red;
 }
